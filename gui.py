@@ -98,8 +98,7 @@ def main_menu():
                 if event.button == True:
                     click = True
             pygame.display.update()
-tempX = []
-tempY = []
+
 def mnist():
     click = False
     writing = False
@@ -170,7 +169,8 @@ def mnist():
                 if event.button == True:
                     click = True
                 writing = True
-            if event.type == MOUSEBUTTONUP:
+            
+           if event.type == MOUSEBUTTONUP:
                 writing = False
                 if len(x_tracker) != 0 and len(y_tracker) != 0:
                     y_tracker = sorted(y_tracker)
@@ -257,8 +257,6 @@ def about():
         
         click = False
         
-        makeText("Hello my name is abbas kazmo and i will be explaing to you what exactly the mnist model is and how i got it to"
-        , white, None, screen, 450,450, 35 )
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
@@ -268,4 +266,5 @@ def about():
                     click = True
         pygame.display.update()
 
+# run game 
 main_menu() 
