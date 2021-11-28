@@ -24,15 +24,15 @@ train_y
 
 # create model 
 model = Sequential()
-# model.add(Conv2D(32, (3,3), input_shape = (28,28,1), activation = 'relu'))
-# # model.add(MaxPool2D((2,2)))
-# model.add(AveragePooling2D(pool_size=(2,2))) 
-# model.add(Conv2D(64, (3,3), activation = 'relu'))
-# # model.add(MaxPool2D((2,2)))
-# model.add(AveragePooling2D(pool_size=(2,2))) 
-# model.add(Flatten())
-# model.add(Dropout(0.2))
-# model.add(Dense(10, activation = "softmax"))
+model.add(Conv2D(32, (3,3), input_shape = (28,28,1), activation = 'relu'))
+
+model.add(AveragePooling2D(pool_size=(2,2))) 
+model.add(Conv2D(64, (3,3), activation = 'relu'))
+
+model.add(AveragePooling2D(pool_size=(2,2))) 
+model.add(Flatten())
+model.add(Dropout(0.2))
+model.add(Dense(10, activation = "softmax"))
 
 model.add(Dense(512, input_dim=784, activation = "relu"))
 # An "activation" is just a non-linear function applied to the output
