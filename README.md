@@ -1,1 +1,1 @@
-# Interactive_handwriting_recognition
+# Interactive Handwriting Recognition Model
